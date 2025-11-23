@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Procedurales</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Montserrat:wght@300&family=Playfair+Display:ital@1&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        canvas {
+            display: block;
+            z-index: 1;
+        }
+
+        #dedication {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            font-size: 3rem;
+            text-align: center;
+            pointer-events: none;
+            /* Let clicks pass through to canvas */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            transition: all 0.5s ease;
+        }
+
+        #surpriseBtn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            z-index: 20;
+        }
+
+        #surpriseBtn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dedication">para Anabel</div>
+    <button id="surpriseBtn">Sorpresa</button>
+    <audio id="bgMusic" src="Queen - Good Old Fashioned Lover Boy (Letra en Inglés y Español)ENG-ESP.mp3"></audio>
+    <script src="sketch.js"></script>
+</body>
+
+</html>
